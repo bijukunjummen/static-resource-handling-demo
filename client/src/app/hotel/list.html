@@ -1,0 +1,32 @@
+<div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Zip</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="hotel in hotels">
+                    <td>{{hotel.id}}</td>
+                    <td>{{hotel.name}}</td>
+                    <td>{{hotel.address}}</td>
+                    <td>{{hotel.zip}}</td>
+                    <td><a ui-sref="edit({ hotelId: hotel.id })">Edit</a> | <a
+                            ng-click="deleteHotel(hotel)">Delete</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <a ui-sref="create" class="btn btn-default">New Hotel</a>
+        </div>
+    </div>
+</div>

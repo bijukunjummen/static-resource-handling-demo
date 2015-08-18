@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('gulpAngular')
+    .module('hotelsApp')
     .constant('malarkey', malarkey)
     .constant('toastr', toastr)
     .constant('moment', moment);

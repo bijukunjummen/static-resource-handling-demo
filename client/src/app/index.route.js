@@ -2,20 +2,27 @@
   'use strict';
 
   angular
-    .module('gulpAngular')
+    .module('hotelsApp')
     .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      });
+    $urlRouterProvider.otherwise("home");
 
-    $urlRouterProvider.otherwise('/');
+    $stateProvider
+        .state('home', {
+          url:'/home',
+          templateUrl: 'app/hotel/list.html',
+          controller: 'HotelCtrl'
+        }).state('edit', {
+          url:'/edit/:hotelId',
+          templateUrl: 'app/hotel/edit.html',
+          controller: 'HotelEditCtrl'
+        }).state('create', {
+          url:'/create',
+          templateUrl: 'app/hotel/create.html',
+          controller: 'HotelCtrl'
+        });
   }
 
 })();

@@ -2,11 +2,11 @@
   'use strict';
 
   angular
-    .module('gulpAngular')
-    .directive('acmeNavbar', acmeNavbar);
+    .module('hotelsApp')
+    .directive('navbar', navbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function navbar() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',

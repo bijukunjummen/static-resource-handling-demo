@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RootController {
 	@RequestMapping("/")
 	public String onRootAccess() {
-		return "redirect:/hotels";
+		return "redirect:/index.html";
 	}
 }
